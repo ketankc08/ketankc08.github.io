@@ -593,9 +593,6 @@
   .isolation-auto {
     isolation: auto;
   }
-  .z-20 {
-    z-index: 20;
-  }
   .z-auto {
     z-index: auto;
   }
@@ -824,8 +821,8 @@
   .w-\[90\%\] {
     width: 90%;
   }
-  .w-\[1500px\] {
-    width: 1500px;
+  .w-\[500px\] {
+    width: 500px;
   }
   .w-full {
     width: 100%;
@@ -1668,9 +1665,6 @@
   .object-top {
     object-position: top;
   }
-  .p-2 {
-    padding: calc(var(--spacing) * 2);
-  }
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
@@ -1761,10 +1755,6 @@
   }
   .text-\[13px\] {
     font-size: 13px;
-  }
-  .leading-\[70px\] {
-    --tw-leading: 70px;
-    line-height: 70px;
   }
   .leading-none {
     --tw-leading: 1;
@@ -2163,10 +2153,6 @@
   .transition-normal {
     transition-behavior: normal;
   }
-  .duration-300 {
-    --tw-duration: 300ms;
-    transition-duration: 300ms;
-  }
   .ease-in {
     --tw-ease: var(--ease-in);
     transition-timing-function: var(--ease-in);
@@ -2328,13 +2314,6 @@
   .transform-view {
     transform-box: view-box;
   }
-  .hover\:cursor-pointer {
-    &:hover {
-      @media (hover: hover) {
-        cursor: pointer;
-      }
-    }
-  }
   .hover\:bg-black {
     &:hover {
       @media (hover: hover) {
@@ -2346,13 +2325,6 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-gray-400);
-      }
-    }
-  }
-  .hover\:text-gray-300 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-gray-300);
       }
     }
   }
@@ -2387,16 +2359,15 @@
       outline-style: none;
     }
   }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
   .md\:text-base {
     @media (width >= 48rem) {
       font-size: var(--text-base);
       line-height: var(--tw-leading, var(--text-base--line-height));
-    }
-  }
-  .xl\:text-3xl {
-    @media (width >= 80rem) {
-      font-size: var(--text-3xl);
-      line-height: var(--tw-leading, var(--text-3xl--line-height));
     }
   }
 }
@@ -2683,10 +2654,6 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-ease {
   syntax: "*";
   inherits: false;
@@ -2704,6 +2671,10 @@
   inherits: false;
 }
 @property --tw-contain-style {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
   syntax: "*";
   inherits: false;
 }
